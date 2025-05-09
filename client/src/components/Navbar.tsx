@@ -16,6 +16,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetHeader } from "./ui/sheet";
 
 // eslint-disable-next-line
 const Navbar = () => {
+  // eslint-disable-next-line
   const { theme, setTheme } = useTheme();
   const pathname = usePathname();
 
