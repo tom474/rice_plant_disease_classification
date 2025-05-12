@@ -4,7 +4,7 @@ from PIL import Image
 from utils.image_preprocessor import preprocess_image
 
 # Load the variety classification model
-VARIETY_IDENTIFICATION_MODEL_PATH = "./models/variety_classification_model.keras"
+VARIETY_IDENTIFICATION_MODEL_PATH = "./models/variety_identification_model.keras"
 variety_identification_model = tf.keras.models.load_model(VARIETY_IDENTIFICATION_MODEL_PATH)
 
 # Define the variety classes
