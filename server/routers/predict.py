@@ -4,26 +4,46 @@ from PIL import Image
 from io import BytesIO
 from datetime import datetime
 from bson import ObjectId
-import tensorflow as tf
 
-from utils.preprocessing import preprocess_image
+from db import fs, prediction_collection
+from utils.disease_classifier import classify_disease
+from utils.variety_identifier import identify_variety
+from utils.age_predictor import predict_age
 
 router = APIRouter()
 
-# Load models
-disease_classification_model = tf.keras.models.load_model("../models/disease_classification_model.keras")
 
-@router.post("/disease")
-async def classify_disease(file: UploadFile = File(...)):
+@router.post("/")
+async def predict(file: UploadFile = File(...)):
     try:
-        image = Image.open(BytesIO(await file.read()))
-        input_image = preprocess_image(image)
-        
-        # Predict using the disease classification model
-        predictions = disease_classification_model.predict(input_image)
-        predicted_class = tf.argmax(predictions, axis=1).numpy()[0]
-        confidence = tf.reduce_max(predictions, axis=1).numpy()[0]
-    
+        # Read and save image to GridFS
+        contents = await file.read()
+        image_stream = BytesIO(contents)
+        image = Image.open(image_stream).convert("RGB")
+        image_id = await fs.upload_from_stream(file.filename, BytesIO(contents))
+
+        # Run all 3 predictions
+        disease = classify_disease(image)
+        variety = identify_variety(image)
+        age = predict_age(image)
+
+        # Save result to MongoDB
+        prediction_record = {
+            "image_id": str(image_id),
+            "filename": file.filename,
+            "disease": disease,
+            "variety": variety,
+            "age": age,
+            "timestamp": datetime.utcnow(),
+        }
+        await prediction_collection.insert_one(prediction_record)
+
+        return {
+            "image_id": str(image_id),
+            "disease": disease,
+            "variety": variety,
+            "age": age,
+        }
+
     except Exception as e:
         return JSONResponse(status_code=500, content={"error": str(e)})
-        

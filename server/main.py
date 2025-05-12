@@ -4,6 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 # Routers for different endpoints
 from routers.predict import router as predict_router
 from routers.history import router as history_router
+from routers.image import router as image_router
 
 app = FastAPI(
     title="PaddyScannerAI API",
@@ -23,6 +24,7 @@ app.add_middleware(
 # Include API routers
 app.include_router(predict_router, prefix="/api/predict", tags=["Predict"])
 app.include_router(history_router, prefix="/api/history", tags=["History"])
+app.include_router(image_router, prefix="/api/image", tags=["Image"])
 
 
 @app.get("/")
