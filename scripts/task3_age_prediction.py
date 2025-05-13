@@ -5,7 +5,7 @@ from preprocessing import preprocess_image
 
 # Configurations
 MODEL_PATH = "../models/age_prediction_model.keras"
-IMAGE_PATH = "./data/200001.jpg"
+IMAGE_PATH = "./data/200200.jpg"
 AGE_CLASSES = sorted(
     [45, 47, 50, 55, 57, 60, 62, 65, 66, 67, 68, 70, 72, 73, 75, 77, 80, 82]
 )
@@ -33,7 +33,7 @@ def predict_age(model_path: str, image_path: str, width: int = 128, height: int 
 
     # Load and preprocess image
     image = Image.open(image_path)
-    input_tensor = preprocess_image(image, width=width, height=height)
+    input_tensor = preprocess_image(image, width=width, height=height, normalize=False)
 
     # Predict
     print("-" * 50)

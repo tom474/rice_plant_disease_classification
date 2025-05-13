@@ -5,7 +5,7 @@ from preprocessing import preprocess_image
 
 # Configurations
 MODEL_PATH = "../models/variety_identification_model.keras"
-IMAGE_PATH = "./data/200001.jpg"
+IMAGE_PATH = "./data/200200.jpg"
 VARIETY_CLASSES = sorted(
     [
         "ADT45",
@@ -46,7 +46,7 @@ def identify_variety(
 
     # Load and preprocess image
     image = Image.open(image_path)
-    input_tensor = preprocess_image(image, width=width, height=height)
+    input_tensor = preprocess_image(image, width=width, height=height, normalize=False)
 
     # Predict
     prediction = model.predict(input_tensor)[0]
