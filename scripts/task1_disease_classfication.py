@@ -5,7 +5,7 @@ from preprocessing import preprocess_image
 
 # Configurations
 MODEL_PATH = "../models/disease_classification_model.keras"
-IMAGE_PATH = "./data/200001.jpg"
+IMAGE_PATH = "./data/200100.jpg"
 DISEASE_CLASSES = sorted(
     [
         "Bacterial Leaf Blight",
@@ -46,7 +46,7 @@ def classify_disease(
 
     # Load and preprocess image
     image = Image.open(image_path)
-    input_tensor = preprocess_image(image, width=width, height=height)
+    input_tensor = preprocess_image(image, width=width, height=height, normalize=False)
 
     # Predict
     prediction = model.predict(input_tensor)[0]
