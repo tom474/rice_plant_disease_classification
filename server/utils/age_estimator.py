@@ -4,7 +4,7 @@ from PIL import Image
 from utils.image_preprocessor import preprocess_image
 
 # Load the age classification model
-AGE_PREDICTION_MODEL_PATH = "models/age_prediction_model.keras"
+AGE_PREDICTION_MODEL_PATH = "../models/age_prediction_model.keras"
 age_prediction_model = tf.keras.models.load_model(AGE_PREDICTION_MODEL_PATH)
 
 # Define the age classes (in days)
@@ -30,7 +30,7 @@ def estimate_age(image_input: Image.Image, width: int = 128, height: int = 128) 
             - 'result' (int): Predicted age in days.
             - 'confidence' (float): Softmax confidence score (0.0 to 1.0), rounded to 4 decimals.
     """
-    input_tensor = preprocess_image(image_input, width=width, height=height)
+    input_tensor = preprocess_image(image_input, width=width, height=height, normalize=False)
     prediction = age_prediction_model.predict(input_tensor)[0]
     predicted_idx = np.argmax(prediction)
     confidence = float(prediction[predicted_idx])

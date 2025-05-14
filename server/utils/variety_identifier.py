@@ -4,7 +4,7 @@ from PIL import Image
 from utils.image_preprocessor import preprocess_image
 
 # Load the variety classification model
-VARIETY_IDENTIFICATION_MODEL_PATH = "./models/variety_identification_model.keras"
+VARIETY_IDENTIFICATION_MODEL_PATH = "../models/variety_identification_model.keras"
 variety_identification_model = tf.keras.models.load_model(
     VARIETY_IDENTIFICATION_MODEL_PATH
 )
@@ -45,7 +45,7 @@ def identify_variety(
             - 'result' (str): Predicted paddy variety.
             - 'confidence' (float): Softmax confidence score (0.0 to 1.0), rounded to 4 decimals.
     """
-    input_tensor = preprocess_image(image_input, width=width, height=height)
+    input_tensor = preprocess_image(image_input, width=width, height=height, normalize=False)
     prediction = variety_identification_model.predict(input_tensor)[0]
     predicted_idx = np.argmax(prediction)
     confidence = float(prediction[predicted_idx])

@@ -5,7 +5,7 @@ from preprocessing import preprocess_image
 
 # Configurations
 MODEL_PATH = "../models/age_prediction_model.keras"
-IMAGE_PATH = "./data/200200.jpg"
+IMAGE_PATH = "./data/200100.jpg"
 AGE_CLASSES = sorted(
     [45, 47, 50, 55, 57, 60, 62, 65, 66, 67, 68, 70, 72, 73, 75, 77, 80, 82]
 )

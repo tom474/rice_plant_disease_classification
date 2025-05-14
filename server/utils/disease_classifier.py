@@ -4,7 +4,7 @@ from PIL import Image
 from utils.image_preprocessor import preprocess_image
 
 # Load the disease classification model
-DISEASE_CLASSIFICATION_MODEL_PATH = "./models/disease_classification_model.keras"
+DISEASE_CLASSIFICATION_MODEL_PATH = "../models/disease_classification_model.keras"
 disease_classification_model = tf.keras.models.load_model(
     DISEASE_CLASSIFICATION_MODEL_PATH
 )
@@ -45,7 +45,7 @@ def classify_disease(
             - 'result' (str): Predicted disease name.
             - 'confidence' (float): Softmax confidence score (0.0 to 1.0), rounded to 4 decimals.
     """
-    input_tensor = preprocess_image(image_input, width=width, height=height)
+    input_tensor = preprocess_image(image_input, width=width, height=height, normalize=False)
     prediction = disease_classification_model.predict(input_tensor)[0]
     predicted_idx = np.argmax(prediction)
     confidence = float(prediction[predicted_idx])

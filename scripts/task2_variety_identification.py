@@ -5,7 +5,7 @@ from preprocessing import preprocess_image
 
 # Configurations
 MODEL_PATH = "../models/variety_identification_model.keras"
-IMAGE_PATH = "./data/200200.jpg"
+IMAGE_PATH = "./data/200100.jpg"
 VARIETY_CLASSES = sorted(
     [
         "ADT45",
