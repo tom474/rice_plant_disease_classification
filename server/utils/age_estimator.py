@@ -4,7 +4,7 @@ from PIL import Image
 from utils.image_preprocessor import preprocess_image
 
 # Load the age classification model
-AGE_PREDICTION_MODEL_PATH = "../models/age_prediction_model.keras"
+AGE_PREDICTION_MODEL_PATH = "./models/age_prediction_model.keras"
 age_prediction_model = tf.keras.models.load_model(AGE_PREDICTION_MODEL_PATH)
 
 # Define the age classes (in days)

@@ -4,7 +4,7 @@ from PIL import Image
 from utils.image_preprocessor import preprocess_image
 
 # Load the disease classification model
-DISEASE_CLASSIFICATION_MODEL_PATH = "../models/disease_classification_model.keras"
+DISEASE_CLASSIFICATION_MODEL_PATH = "./models/disease_classification_model.keras"
 disease_classification_model = tf.keras.models.load_model(
     DISEASE_CLASSIFICATION_MODEL_PATH
 )
