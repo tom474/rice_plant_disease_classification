@@ -1,7 +1,6 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { Moon, Sun, Menu } from "lucide-react";
@@ -12,49 +11,56 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
-import { Sheet, SheetContent, SheetTrigger, SheetHeader } from "./ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+} from "./ui/sheet";
+import { useState } from "react";
 
-// eslint-disable-next-line
 const Navbar = () => {
-  // eslint-disable-next-line
   const { theme, setTheme } = useTheme();
-  const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
+
+  console.log("Current theme:", theme);
 
   return (
-    <nav className="border-b shadow-sm px-4 py-3">
+    <nav className="sticky top-0 z-50 border-b shadow-sm px-4 py-3 bg-background backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo-sm.png" alt="logo" width={40} height={40} />
+        <Link
+          href="/"
+          className="flex items-center gap-2"
+          aria-label="Go to homepage"
+        >
+          <Image
+            src="/logo-sm.png"
+            alt="logo"
+            width={40}
+            height={40}
+            loading="lazy"
+          />
           <span className="text-lg font-bold">PaddyScannerAI</span>
         </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-4">
-          <Link
-            href="#paddy-scanner"
-            className={`transition-colors ${
-              pathname === "/#paddy-scanner" ? "font-bold" : ""
-            }`}
-          >
+          <Link href="#paddy-scanner" className="transition-colors">
             Paddy Scanner
           </Link>
-          <Link
-            href="#history"
-            className={`transition-colors ${
-              pathname === "/#history" ? "font-bold" : ""
-            }`}
-          >
+          <Link href="#history" className="transition-colors">
             History
           </Link>
 
           {/* Theme Toggle */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="icon">
+              <Button variant="outline" size="icon" aria-label="Toggle theme">
                 <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
                 <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                <span className="sr-only">Toggle theme</span>
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
@@ -73,23 +79,53 @@ const Navbar = () => {
 
         {/* Mobile Nav (Hamburger + Sheet) */}
         <div className="md:hidden">
-          <Sheet>
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" aria-label="Open menu">
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-64">
+            <SheetContent
+              side="right"
+              className="w-64"
+              aria-describedby={undefined}
+            >
               <SheetHeader>
-                <span className="font-bold text-lg">Menu</span>
+                <SheetTitle>PaddyScannerAI</SheetTitle>
+                <SheetDescription>
+                  Diagnose diseases, identify variety, and predict age of rice
+                  plants.
+                </SheetDescription>
               </SheetHeader>
-              <div className="ml-3 flex flex-col gap-4">
-                <Link href="/#paddy-scanner" className="text-base">
+
+              <div className="ml-3 flex flex-col gap-4 border-t pt-4">
+                <button
+                  className="text-base text-left hover:underline"
+                  onClick={() => {
+                    setIsOpen(false);
+                    setTimeout(() => {
+                      document
+                        .getElementById("paddy-scanner")
+                        ?.scrollIntoView({ behavior: "smooth" });
+                    }, 300);
+                  }}
+                >
                   Paddy Scanner
-                </Link>
-                <Link href="/#history" className="text-base">
+                </button>
+                <button
+                  className="text-base text-left hover:underline"
+                  onClick={() => {
+                    setIsOpen(false);
+                    setTimeout(() => {
+                      document
+                        .getElementById("history")
+                        ?.scrollIntoView({ behavior: "smooth" });
+                    }, 300);
+                  }}
+                >
                   History
-                </Link>
+                </button>
+
                 <div className="border-t pt-4">
                   <span className="block text-sm mb-1 text-muted-foreground">
                     Theme

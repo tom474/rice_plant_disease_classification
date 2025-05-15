@@ -11,11 +11,16 @@ export default function PaddyScanner() {
   const [file, setFile] = useState<File | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
   const [result, setResult] = useState<{
-    age?: number;
-    disease?: string;
-    variety?: string;
+    disease?: { result: string; confidence: number };
+    variety?: { result: string; confidence: number };
+    age?: { result: number; confidence: number };
   } | null>(null);
   const [loading, setLoading] = useState(false);
+
+  // Dispatch an event for History.tsx to re-fetch
+  const notifyHistoryUpdate = () => {
+    window.dispatchEvent(new Event("prediction:completed"));
+  };
 
   useEffect(() => {
     const timer = setTimeout(() => setVisible(true), 100);
@@ -37,21 +42,30 @@ export default function PaddyScanner() {
     formData.append("file", file);
 
     setLoading(true);
-    const res = await fetch("http://localhost:8000/predict", {
-      method: "POST",
-      body: formData,
-    });
+    try {
+      const res = await fetch(
+        "https://rice-plant-disease-classification.k-clowd.top/api/predict/",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
-    const data = await res.json();
-    setResult(data);
-    setLoading(false);
+      const data = await res.json();
+      setResult(data);
+      notifyHistoryUpdate(); // trigger history refresh
+    } catch (error) {
+      console.error("Prediction error:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <section
       id="paddy-scanner"
       className={cn(
-        "min-h-screen flex flex-col justify-center items-center transition-opacity duration-1000 ease-in px-4",
+        "min-h-screen flex flex-col justify-center items-center transition-opacity duration-1000 ease-in px-4 scroll-mt-20",
         visible ? "opacity-100" : "opacity-0"
       )}
     >
@@ -106,27 +120,26 @@ export default function PaddyScanner() {
         {/* Result Column */}
         <div className="text-left border rounded-lg p-6 shadow-sm">
           <h2 className="text-xl font-semibold mb-2">Prediction Result</h2>
-          {/* Dummy */}
-          <p>
-            <strong>Disease:</strong> {result?.disease || "N/A"}
-          </p>
-          <p>
-            <strong>Variety:</strong> {result?.variety || "N/A"}
-          </p>
-          <p>
-            <strong>Estimated Age:</strong>{" "}
-            {result?.age !== undefined ? `${result.age} days` : "N/A"}
-          </p>
-          {/* {!result && <p className="text-muted-foreground">Results will appear here after scanning.</p>}
-          {result && (
+          {!result ? (
+            <p className="text-muted-foreground">
+              Results will appear here after scanning.
+            </p>
+          ) : (
             <div className="space-y-2 text-sm">
-              {result.disease && <p><strong>Disease:</strong> {result.disease}</p>}
-              {result.variety && <p><strong>Variety:</strong> {result.variety}</p>}
-              {result.age !== undefined && (
-                <p><strong>Estimated Age:</strong> {result.age} days</p>
-              )}
+              <p>
+                <strong>Disease:</strong> {result.disease?.result || "N/A"}
+              </p>
+              <p>
+                <strong>Variety:</strong> {result.variety?.result || "N/A"}
+              </p>
+              <p>
+                <strong>Estimated Age:</strong>{" "}
+                {result.age?.result !== undefined
+                  ? `${result.age.result} days`
+                  : "N/A"}
+              </p>
             </div>
-          )} */}
+          )}
         </div>
       </div>
     </section>
