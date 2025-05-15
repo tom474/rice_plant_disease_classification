@@ -49,7 +49,7 @@ async def predict(file: UploadFile = File(...)):
             "disease": disease,
             "variety": variety,
             "age": age,
-            "timestamp": datetime.now(timezone.utc),
+            "timestamp": datetime.now(),
         }
         await prediction_collection.insert_one(prediction_record)
 
@@ -61,7 +61,7 @@ async def predict(file: UploadFile = File(...)):
         }
 
     except Exception as e:
-        traceback.print_exc()  # Print full traceback to console
+        traceback.print_exc()
         return JSONResponse(status_code=500, content={"error": str(e)})
 
 
