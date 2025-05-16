@@ -854,7 +854,7 @@ image_id,label,variety,age
 200853.jpg,bacterial_panicle_blight,ADT45,75
 200854.jpg,dead_heart,ADT45,67
 200855.jpg,dead_heart,ADT45,70
-200856.jpg,tungro,KarnatakaPonni,70
+200856.jpg,tungro,ADT45,70
 200857.jpg,blast,Ponni,47
 200858.jpg,tungro,ADT45,70
 200859.jpg,hispa,ADT45,50
@@ -934,7 +934,7 @@ image_id,label,variety,age
 200933.jpg,dead_heart,ADT45,72
 200934.jpg,blast,KarnatakaPonni,70
 200935.jpg,blast,ADT45,67
-200936.jpg,blast,ADT45,75
+200936.jpg,blast,KarnatakaPonni,75
 200937.jpg,normal,Ponni,60
 200938.jpg,tungro,ADT45,75
 200939.jpg,blast,AndraPonni,45
@@ -994,7 +994,7 @@ image_id,label,variety,age
 200993.jpg,tungro,ADT45,70
 200994.jpg,hispa,ADT45,70
 200995.jpg,brown_spot,Ponni,67
-200996.jpg,blast,ADT45,80
+200996.jpg,blast,Ponni,80
 200997.jpg,dead_heart,Ponni,80
 200998.jpg,hispa,AndraPonni,65
 200999.jpg,hispa,KarnatakaPonni,70
@@ -1134,7 +1134,7 @@ image_id,label,variety,age
 201133.jpg,hispa,ADT45,70
 201134.jpg,bacterial_panicle_blight,ADT45,68
 201135.jpg,tungro,Onthanel,70
-201136.jpg,dead_heart,ADT45,73
+201136.jpg,dead_heart,RR,73
 201137.jpg,brown_spot,ADT45,72
 201138.jpg,tungro,ADT45,75
 201139.jpg,bacterial_leaf_streak,ADT45,50
@@ -2293,10 +2293,10 @@ image_id,label,variety,age
 202292.jpg,blast,ADT45,70
 202293.jpg,hispa,ADT45,68
 202294.jpg,downy_mildew,ADT45,60
-202295.jpg,tungro,KarnatakaPonni,70
+202295.jpg,tungro,ADT45,70
 202296.jpg,hispa,Ponni,65
 202297.jpg,brown_spot,ADT45,70
-202298.jpg,tungro,ADT45,80
+202298.jpg,tungro,KarnatakaPonni,80
 202299.jpg,brown_spot,ADT45,55
 202300.jpg,dead_heart,ADT45,70
 202301.jpg,hispa,AndraPonni,65
@@ -2693,7 +2693,7 @@ image_id,label,variety,age
 202692.jpg,normal,ADT45,60
 202693.jpg,dead_heart,ADT45,70
 202694.jpg,hispa,AndraPonni,65
-202695.jpg,dead_heart,AtchayaPonni,65
+202695.jpg,dead_heart,ADT45,65
 202696.jpg,hispa,AtchayaPonni,65
 202697.jpg,downy_mildew,KarnatakaPonni,50
 202698.jpg,normal,ADT45,50
@@ -3066,7 +3066,7 @@ image_id,label,variety,age
 203065.jpg,brown_spot,ADT45,70
 203066.jpg,hispa,ADT45,70
 203067.jpg,dead_heart,ADT45,65
-203068.jpg,brown_spot,RR,70
+203068.jpg,brown_spot,ADT45,70
 203069.jpg,tungro,ADT45,57
 203070.jpg,blast,ADT45,70
 203071.jpg,blast,ADT45,65
