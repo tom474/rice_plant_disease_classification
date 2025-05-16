@@ -1,4 +1,4 @@
-﻿image_id,label,variety,age
+image_id,label,variety,age
 200001.jpg,hispa,ADT45,70
 200002.jpg,normal,ADT45,60
 200003.jpg,normal,ADT45,70
@@ -35,7 +35,7 @@
 200034.jpg,brown_spot,KarnatakaPonni,75
 200035.jpg,dead_heart,ADT45,70
 200036.jpg,hispa,ADT45,55
-200037.jpg,bacterial_leaf_blight,ADT45,72
+200037.jpg,tungro,ADT45,72
 200038.jpg,tungro,ADT45,45
 200039.jpg,dead_heart,AndraPonni,72
 200040.jpg,tungro,ADT45,72
@@ -92,7 +92,7 @@
 200091.jpg,hispa,ADT45,45
 200092.jpg,hispa,ADT45,65
 200093.jpg,hispa,ADT45,68
-200094.jpg,blast,ADT45,60
+200094.jpg,tungro,ADT45,60
 200095.jpg,hispa,ADT45,45
 200096.jpg,tungro,Onthanel,70
 200097.jpg,blast,ADT45,67
@@ -217,7 +217,7 @@
 200216.jpg,hispa,ADT45,80
 200217.jpg,dead_heart,Onthanel,70
 200218.jpg,blast,ADT45,70
-200219.jpg,brown_spot,KarnatakaPonni,75
+200219.jpg,blast,KarnatakaPonni,75
 200220.jpg,downy_mildew,KarnatakaPonni,50
 200221.jpg,dead_heart,ADT45,75
 200222.jpg,hispa,ADT45,68
@@ -398,7 +398,7 @@
 200397.jpg,blast,AndraPonni,45
 200398.jpg,blast,KarnatakaPonni,75
 200399.jpg,brown_spot,ADT45,70
-200400.jpg,normal,ADT45,70
+200400.jpg,brown_spot,ADT45,70
 200401.jpg,dead_heart,Ponni,80
 200402.jpg,normal,Ponni,60
 200403.jpg,hispa,ADT45,70
@@ -468,7 +468,7 @@
 200467.jpg,normal,ADT45,50
 200468.jpg,bacterial_leaf_streak,KarnatakaPonni,50
 200469.jpg,blast,Onthanel,70
-200470.jpg,brown_spot,ADT45,75
+200470.jpg,blast,ADT45,75
 200471.jpg,bacterial_leaf_blight,ADT45,55
 200472.jpg,hispa,AtchayaPonni,70
 200473.jpg,normal,ADT45,60
@@ -498,7 +498,7 @@
 200497.jpg,normal,Onthanel,70
 200498.jpg,bacterial_leaf_blight,ADT45,60
 200499.jpg,dead_heart,KarnatakaPonni,75
-200500.jpg,hispa,ADT45,60
+200500.jpg,normal,ADT45,60
 200501.jpg,normal,ADT45,67
 200502.jpg,normal,ADT45,60
 200503.jpg,hispa,ADT45,70
@@ -513,7 +513,7 @@
 200512.jpg,hispa,AtchayaPonni,57
 200513.jpg,normal,Ponni,60
 200514.jpg,blast,KarnatakaPonni,75
-200515.jpg,hispa,ADT45,72
+200515.jpg,dead_heart,ADT45,72
 200516.jpg,normal,ADT45,65
 200517.jpg,normal,ADT45,70
 200518.jpg,hispa,Onthanel,70
@@ -532,7 +532,7 @@
 200531.jpg,hispa,AtchayaPonni,65
 200532.jpg,brown_spot,RR,70
 200533.jpg,brown_spot,KarnatakaPonni,70
-200534.jpg,dead_heart,ADT45,45
+200534.jpg,tungro,ADT45,45
 200535.jpg,hispa,AtchayaPonni,65
 200536.jpg,blast,Ponni,47
 200537.jpg,normal,ADT45,50
@@ -612,7 +612,7 @@
 200611.jpg,tungro,ADT45,70
 200612.jpg,tungro,ADT45,55
 200613.jpg,tungro,ADT45,70
-200614.jpg,downy_mildew,Zonal,55
+200614.jpg,tungro,Zonal,55
 200615.jpg,bacterial_leaf_blight,Ponni,47
 200616.jpg,brown_spot,ADT45,70
 200617.jpg,hispa,ADT45,70
@@ -926,7 +926,7 @@
 200925.jpg,bacterial_leaf_streak,Zonal,70
 200926.jpg,blast,KarnatakaPonni,75
 200927.jpg,tungro,ADT45,60
-200928.jpg,normal,ADT45,60
+200928.jpg,tungro,ADT45,60
 200929.jpg,brown_spot,ADT45,65
 200930.jpg,tungro,ADT45,70
 200931.jpg,dead_heart,ADT45,70
@@ -1199,7 +1199,7 @@
 201198.jpg,tungro,ADT45,67
 201199.jpg,bacterial_panicle_blight,ADT45,67
 201200.jpg,hispa,ADT45,70
-201201.jpg,bacterial_panicle_blight,ADT45,75
+201201.jpg,brown_spot,ADT45,75
 201202.jpg,hispa,Ponni,60
 201203.jpg,dead_heart,ADT45,60
 201204.jpg,hispa,KarnatakaPonni,50
@@ -1595,7 +1595,7 @@
 201594.jpg,tungro,ADT45,75
 201595.jpg,blast,ADT45,70
 201596.jpg,normal,Ponni,60
-201597.jpg,blast,ADT45,80
+201597.jpg,normal,ADT45,80
 201598.jpg,hispa,ADT45,70
 201599.jpg,dead_heart,AndraPonni,65
 201600.jpg,dead_heart,ADT45,70
@@ -1643,13 +1643,13 @@
 201642.jpg,normal,ADT45,60
 201643.jpg,hispa,AtchayaPonni,65
 201644.jpg,hispa,ADT45,50
-201645.jpg,hispa,ADT45,70
+201645.jpg,bacterial_leaf_blight,ADT45,70
 201646.jpg,tungro,ADT45,67
 201647.jpg,blast,ADT45,67
 201648.jpg,tungro,ADT45,45
 201649.jpg,hispa,AtchayaPonni,57
 201650.jpg,hispa,ADT45,70
-201651.jpg,hispa,ADT45,70
+201651.jpg,dead_heart,ADT45,70
 201652.jpg,hispa,Zonal,70
 201653.jpg,brown_spot,ADT45,55
 201654.jpg,blast,ADT45,60
@@ -1778,7 +1778,7 @@
 201777.jpg,bacterial_leaf_streak,Onthanel,50
 201778.jpg,bacterial_leaf_blight,ADT45,60
 201779.jpg,brown_spot,ADT45,80
-201780.jpg,hispa,ADT45,70
+201780.jpg,blast,ADT45,70
 201781.jpg,dead_heart,KarnatakaPonni,75
 201782.jpg,hispa,ADT45,60
 201783.jpg,normal,ADT45,60
@@ -1881,7 +1881,7 @@
 201880.jpg,normal,ADT45,67
 201881.jpg,brown_spot,KarnatakaPonni,75
 201882.jpg,blast,AndraPonni,45
-201883.jpg,downy_mildew,ADT45,70
+201883.jpg,dead_heart,ADT45,70
 201884.jpg,dead_heart,ADT45,72
 201885.jpg,dead_heart,KarnatakaPonni,75
 201886.jpg,bacterial_leaf_streak,ADT45,70
@@ -1995,7 +1995,7 @@
 201994.jpg,hispa,AndraPonni,65
 201995.jpg,brown_spot,ADT45,70
 201996.jpg,hispa,ADT45,50
-201997.jpg,brown_spot,ADT45,60
+201997.jpg,downy_mildew,ADT45,60
 201998.jpg,tungro,ADT45,60
 201999.jpg,tungro,ADT45,67
 202000.jpg,hispa,Zonal,70
@@ -2437,7 +2437,7 @@
 202436.jpg,normal,ADT45,60
 202437.jpg,bacterial_leaf_blight,ADT45,55
 202438.jpg,hispa,ADT45,65
-202439.jpg,brown_spot,ADT45,45
+202439.jpg,downy_mildew,ADT45,45
 202440.jpg,blast,ADT45,70
 202441.jpg,hispa,KarnatakaPonni,70
 202442.jpg,blast,ADT45,45
@@ -2564,7 +2564,7 @@
 202563.jpg,hispa,AtchayaPonni,65
 202564.jpg,normal,ADT45,60
 202565.jpg,brown_spot,ADT45,72
-202566.jpg,bacterial_leaf_blight,ADT45,75
+202566.jpg,brown_spot,ADT45,75
 202567.jpg,normal,Ponni,60
 202568.jpg,dead_heart,ADT45,67
 202569.jpg,downy_mildew,ADT45,72
@@ -2675,7 +2675,7 @@
 202674.jpg,dead_heart,ADT45,70
 202675.jpg,blast,ADT45,75
 202676.jpg,normal,ADT45,60
-202677.jpg,bacterial_leaf_blight,ADT45,70
+202677.jpg,hispa,ADT45,70
 202678.jpg,downy_mildew,KarnatakaPonni,70
 202679.jpg,tungro,ADT45,72
 202680.jpg,blast,ADT45,70
@@ -3069,7 +3069,7 @@
 203068.jpg,brown_spot,RR,70
 203069.jpg,tungro,ADT45,57
 203070.jpg,blast,ADT45,70
-203071.jpg,hispa,ADT45,65
+203071.jpg,blast,ADT45,65
 203072.jpg,tungro,ADT45,67
 203073.jpg,hispa,AtchayaPonni,65
 203074.jpg,tungro,ADT45,67
@@ -3119,7 +3119,7 @@
 203118.jpg,hispa,ADT45,50
 203119.jpg,dead_heart,Onthanel,50
 203120.jpg,dead_heart,ADT45,70
-203121.jpg,bacterial_leaf_streak,ADT45,75
+203121.jpg,hispa,ADT45,75
 203122.jpg,bacterial_panicle_blight,ADT45,70
 203123.jpg,hispa,ADT45,70
 203124.jpg,tungro,ADT45,45
@@ -3146,7 +3146,7 @@
 203145.jpg,normal,ADT45,50
 203146.jpg,hispa,AndraPonni,65
 203147.jpg,normal,ADT45,55
-203148.jpg,brown_spot,ADT45,68
+203148.jpg,hispa,ADT45,68
 203149.jpg,blast,ADT45,70
 203150.jpg,normal,ADT45,60
 203151.jpg,downy_mildew,AtchayaPonni,45
@@ -3196,7 +3196,7 @@
 203195.jpg,dead_heart,ADT45,75
 203196.jpg,blast,AndraPonni,45
 203197.jpg,dead_heart,ADT45,70
-203198.jpg,tungro,ADT45,60
+203198.jpg,downy_mildew,ADT45,60
 203199.jpg,hispa,ADT45,70
 203200.jpg,normal,ADT45,70
 203201.jpg,hispa,ADT45,68
@@ -3213,7 +3213,7 @@
 203212.jpg,downy_mildew,KarnatakaPonni,45
 203213.jpg,hispa,Zonal,70
 203214.jpg,hispa,ADT45,45
-203215.jpg,bacterial_panicle_blight,ADT45,70
+203215.jpg,blast,ADT45,70
 203216.jpg,bacterial_panicle_blight,Ponni,80
 203217.jpg,blast,AndraPonni,45
 203218.jpg,normal,ADT45,50
@@ -3356,7 +3356,7 @@
 203355.jpg,normal,AndraPonni,70
 203356.jpg,tungro,ADT45,50
 203357.jpg,downy_mildew,KarnatakaPonni,50
-203358.jpg,blast,KarnatakaPonni,75
+203358.jpg,bacterial_leaf_streak,KarnatakaPonni,75
 203359.jpg,bacterial_leaf_blight,Ponni,47
 203360.jpg,tungro,ADT45,60
 203361.jpg,hispa,ADT45,68
@@ -3447,7 +3447,7 @@
 203446.jpg,downy_mildew,ADT45,70
 203447.jpg,brown_spot,ADT45,70
 203448.jpg,brown_spot,ADT45,55
-203449.jpg,hispa,ADT45,60
+203449.jpg,downy_mildew,ADT45,60
 203450.jpg,normal,ADT45,60
 203451.jpg,brown_spot,KarnatakaPonni,75
 203452.jpg,dead_heart,Onthanel,70
